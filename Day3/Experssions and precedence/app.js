@@ -1,0 +1,5 @@
+console.log(1 + (2 + 5) * 10)
+console.log(2 + 3 * 4 / 3)
+console.log((3 / 1 % 3))
+console.log(37 - 4 * 5 + 3)
+console.log(37 - 4 * (5 + 3))
