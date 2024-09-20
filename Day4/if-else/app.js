@@ -83,34 +83,34 @@
 // }
 
 
-let n1 = Number(prompt("Enter number 1"))
-let n2 = Number(prompt("Enter number 2"))
-let n3 = Number(prompt("Enter number 3"))
-let n4 = Number(prompt("Enter number 4"))
-let n5 = Number(prompt("Enter number 5"))
+// let n1 = Number(prompt("Enter number 1"))
+// let n2 = Number(prompt("Enter number 2"))
+// let n3 = Number(prompt("Enter number 3"))
+// let n4 = Number(prompt("Enter number 4"))
+// let n5 = Number(prompt("Enter number 5"))
 
-let avg = (n1 + n2 + n3 + n4 + n5) / 5
+// let avg = (n1 + n2 + n3 + n4 + n5) / 5
 
-if(avg > 90)
-{
-    alert("A+")
-}
-else if(avg > 80)
-{
-    alert("A")
-}
-else if(avg > 70)
-{
-    alert("B+")
-}
-else if(avg >= 60)
-{
-    alert("B")
-}
-else
-{
-    alert("Fail")
-}
+// if(avg > 90)
+// {
+//     alert("A+")
+// }
+// else if(avg > 80)
+// {
+//     alert("A")
+// }
+// else if(avg > 70)
+// {
+//     alert("B+")
+// }
+// else if(avg >= 60)
+// {
+//     alert("B")
+// }
+// else
+// {
+//     alert("Fail")
+// }
 
 // if(avg >= 91 && avg <= 100)
 // {
@@ -134,14 +134,94 @@ else
 
 
 
+// let n1 = Number(prompt("Enter number 1"))
+// let n2 = Number(prompt("Enter number 2"))
+// let n3 = Number(prompt("Enter number 3"))
+
+// if(n1 > n2 && n1 > n3)
+// {
+//     alert(n1)
+// }
+// else if(n2 > n1 && n2 > n3)
+// {
+//     alert(n2)
+// }
+// else
+// {
+//     alert(n3)
+// }
+
+
+
+// let password = "123accio"
+
+// let input = prompt("Enter your password")
+
+// if(password == input)
+// {
+//     alert("User Authenticated")
+// }
+// else
+// {
+//     alert("Access denied")
+// }
+
+
+
+
+// let n1 = Number(prompt("Enter number 1"))
+// let n2 = Number(prompt("Enter number 2"))
+
+// let n1 = prompt("Enter number 1")
+// let n2 = prompt("Enter number 2")
+
+// let sign = prompt("Enter +, -, /, %, *")
+
+// let ques = n1 + sign + n2
+
+// let ans = eval(ques)
+
+// alert(ans)
+
+// if(sign == "+")
+// {
+//     alert(n1 + n2)
+// }
+// else if(sign == "-")
+// {
+//     alert(n1 - n2)
+// }
+// else if(sign == "*")
+//     {
+//         alert(n1 * n2)
+//     }
+
+//     else if(sign == "/")
+//         {
+//             alert(n1 / n2)
+//         }
+
+//         else if(sign == "%")
+//             {
+//                 alert(n1 % n2)
+//             }
 
 
 
 
 
 
+let price = Number(prompt("Enter product price"));
 
 
+if(price < 500)
+{
+    alert(price - (price * 0.05))
+}
+else
+{
+    alert(price - (price * 0.15))
+}
 
 
 
