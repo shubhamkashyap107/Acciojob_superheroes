@@ -147,3 +147,18 @@ let arr = []
 
 // n -> size of array
 // n elements
+
+
+
+// let n = prompt("Enter the number of elements")
+
+
+// for(let i = 0; i < n; i++)
+// {
+//     arr.push(prompt(`Enter element ${i + 1}`))
+// }
+
+// console.log(arr)
+
+
+
