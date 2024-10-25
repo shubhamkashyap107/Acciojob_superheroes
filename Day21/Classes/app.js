@@ -9,34 +9,34 @@
 // let db = []
 // db.push(user)
 
-// class Animal{
+class Animal{
 
-//     #color
+    #color
 
-//     constructor(naam, awaz, rang = "Black"){
-//         this.name = naam
-//         this.sound = awaz
-//         this.#color = rang
-//     }
-
-
-//      tellSound()
-//     {
-//         console.log(`${this.name} makes a ${this.sound} sound`)
-//     }
-
-//     getColor()
-//     {
-//         return this.#color
-//     }
-
-//     setColor(rang)
-//     {
-//         this.#color = rang
-//     }
+    constructor(naam, awaz, rang = "Black"){
+        this.name = naam
+        this.sound = awaz
+        this.#color = rang
+    }
 
 
-// }
+     tellSound()
+    {
+        console.log(`${this.name} makes a ${this.sound} sound`)
+    }
+
+    getColor()
+    {
+        return this.#color
+    }
+
+    setColor(rang)
+    {
+        this.#color = rang
+    }
+
+
+}
 
 // let dog = new Animal("Dog", "Woof", "Neela")
 // let cat = new Animal("Cat", "Meow", "Peela")
