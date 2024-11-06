@@ -1,0 +1,25 @@
+#one{
+    color: blue;
+    text-decoration: underline;
+    text-align: justify;
+    text-transform: capitalize;
+    /* letter-spacing: 20px; */
+    /* word-spacing: 20px; */
+    line-height: 50px;
+}
+.two{
+    /* font-family: cursive; */
+    /* font-size: 60px; */
+    font-weight: 100;
+}
+
+#dabba{
+    height: 1400px;
+    width: 1400px;
+    border:  1px solid black;
+    /* background-color: gray; */
+    background-image: url("https://images.unsplash.com/photo-1730407787420-a23fcbc7dbe4?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw1fHx8ZW58MHx8fHx8");
+    /* background-size: cover; */
+    background-repeat: no-repeat;
+    background-position: bottom;
+}

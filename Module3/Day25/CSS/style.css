@@ -1,0 +1,90 @@
+/* div{
+    background-color: pink;
+}
+
+
+span{
+    background-color: yellow;
+} */
+
+
+/* h1{
+
+}
+
+div{
+
+}
+
+span{
+
+}
+
+p{
+
+} */
+
+/* universal selector */
+/* *{ 
+    color : red;
+    background-color : green;
+} */
+
+/* type selector */
+/* div{
+    color : gray
+}
+ */
+
+
+  /* class selector */
+/* .qwerty{
+    font-size: 87px;
+} */
+
+/* id selector */
+/* #naam{
+    border: 1px solid black;
+} */
+
+/* child */
+/* div > p{
+    color : red;
+} */
+
+/* div > span > article > p{
+    color :red;
+} */
+
+/* descendant */
+/* div p{
+    color : red;
+} */
+
+
+/* adjacent */
+/* div + p{
+    color : green;
+} */
+
+/* general */
+/* div ~ p{
+    color : yellow;
+} */
+
+/* p:first-child{
+    color : yellow;
+}
+
+p:last-child{
+    color : pink;
+}
+
+p:nth-child(3){
+    font-size: 40px;
+} */
+
+
+/* div:hover{
+    background-color: bisque;
+} */

@@ -1,0 +1,25 @@
+#outer{
+    height: 500px;
+    display: flex;
+    border: 1px solid black;
+    /* flex-direction: row-reverse; */
+    /* justify-content: space-evenly; */
+    gap: 20px;
+    flex-wrap: wrap;
+    /* align-items: center; */
+    align-content: center;
+}
+
+
+.inner{
+    height: 100px;
+    width: 100px;
+    border: 1px solid gold;
+}
+
+/* .new{
+    height: 100px;
+   
+    border: 1px solid gold;
+    flex-shrink: 2;
+} */
