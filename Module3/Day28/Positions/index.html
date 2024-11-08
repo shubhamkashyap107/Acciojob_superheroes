@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+    <h1>CSS Positions</h1>
+
+    <div id="outer">
+        <div style="background-color: red;" class="inner">A</div>
+        <div style="background-color: yellow;" class="inner" id="special">B</div>
+        <div style="background-color: green;" class="inner">C</div>
+    </div>
+
+
+    <div id="outer">
+        <div style="background-color: red;" class="inner">A</div>
+        <div style="background-color: yellow;" class="inner" id="relative-special">B</div>
+        <div style="background-color: green;" class="inner">C</div>
+    </div>
+
+
+    <div style="position: relative;" id="outer">
+        <div style="background-color: red; " class="inner">A</div>
+        <div style="background-color: yellow;" class="inner" id="absolute-special">B</div>
+        <div style="background-color: green;" class="inner">C</div>
+    </div>
+
+    <div id="outer">
+        <div style="background-color: red; " class="inner">A</div>
+        <div style="background-color: yellow;" class="inner" id="fixed-special">B</div>
+        <div style="background-color: green;" class="inner">C</div>
+    </div>
+
+    <div id="outer" style="height: 600px;">
+        <div style="background-color: red; " class="inner">A</div>
+        <div style="background-color: yellow;" class="inner" id="sticky-special">B</div>
+        <div style="background-color: green;" class="inner">C</div>
+    </div>
+
+
+
+    <div style="height: 1200px;"></div>
+
+</body>
+</html>

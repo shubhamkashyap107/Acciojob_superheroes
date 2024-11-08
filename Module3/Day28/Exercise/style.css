@@ -1,0 +1,24 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+#navbar{
+    align-items: center;
+    justify-content: space-between;
+    display: flex;
+    height: 70px;
+    width: 100vw;
+    background-color: bisque;
+    position: fixed;
+    top: 0px;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+a:hover{
+    scale: 1.4;
+}

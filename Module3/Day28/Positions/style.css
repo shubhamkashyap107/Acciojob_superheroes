@@ -1,0 +1,45 @@
+#outer{
+    display: flex;
+    border: 1px solid black;
+    margin-top: 50px;
+}
+
+
+.inner{
+    height: 100px;
+    width: 100px;
+}
+
+
+#special{
+    /* position: static; */
+    top: 20px;
+    left: 100px;
+}
+
+#relative-special{
+    position: relative;
+    top: 20px;
+    left: 100px;
+}
+
+#absolute-special{
+    position: absolute;
+   /* top: 20px;
+   left: 20px; */
+}
+
+#fixed-special{
+    position: fixed;
+    /* z-index: 99999999; */
+    top: 40px;
+    left: 400px;
+    border: 1px solid black;
+}
+
+
+#sticky-special{
+    position: sticky;
+    top: 200px;
+    /* left: 400px; */
+}
