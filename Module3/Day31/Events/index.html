@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body onclick="">
+    <!-- <h1>Events</h1>
+
+    <button onclick="navigateToGoogle()">Click me</button> -->
+
+
+    <input type="text" id="ip">
+    <button id="btn">Print</button>
+
+    <div id="box" style="height: 100px; width: 100px; border: 1px solid red;"> qwerty</div>
+
+
+    <script>
+
+
+        function changeTheme()
+        {
+            const body = document.querySelector("body")
+            if(body.classList.contains("darkmode"))
+            {
+                body.classList.remove("darkmode")
+                body.classList.add("lightmode")
+            }
+            else
+            {
+                body.classList.remove("lightmode")
+                body.classList.add("darkmode")
+            }
+        }
+        function doSomething(e)
+        {
+            console.log("Btn clicked")
+            
+        }
+        function navigateToGoogle()
+        {
+            window.location.href = "http://www.google.com"
+        }
+
+       
+    </script>
+    <script src="./app.js"></script>
+</body>
+</html>
