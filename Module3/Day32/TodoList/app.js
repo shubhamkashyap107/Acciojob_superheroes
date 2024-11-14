@@ -14,6 +14,7 @@ addBtn.addEventListener("click", () => {
     }
 
     let task = document.createElement("div")
+    task.classList.add("border", "p-3", "myColor", "d-flex", "justify-content-between", "align-items-center", "rounded-4", "mt-3")
 
     let leftDiv = document.createElement("div")
     let rightDiv = document.createElement("div")
@@ -31,6 +32,12 @@ addBtn.addEventListener("click", () => {
 
     let delBtn = document.createElement("button")
     delBtn.innerText = "Delete"
+    delBtn.classList.add("btn", "btn-danger")
+
+    delBtn.addEventListener("click", () => {
+        todoContainer.removeChild(task)
+    })
+
 
     rightDiv.appendChild(delBtn)
 
