@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #outer{
+            height: 300px;
+            width: 300px;
+            background-color: yellow;
+        }
+
+        #middle{
+            height: 200px;
+            width: 200px;
+            background-color: green;
+        }
+
+        #inner{
+            height: 100px;
+            width: 100px;
+            background-color: red;
+        }
+
+
+        #dabba{
+            height: 400px;
+            width: 400px;
+            background-color: yellow;
+            display:  grid;
+            grid-template-columns: 1fr 1fr;
+        }
+
+        .boxes{
+            height: 100px;
+            width: 100px;
+            display: block;
+            border: 5px solid black;
+        }
+    </style>
+</head>
+<body>
+    <h1>Events</h1>
+<!-- 
+    <button onclick="kuchbhi()">CLick me</button>
+
+
+    <div id="d">Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur, neque nemo. Aut asperiores ratione quo, facilis dolore natus exercitationem. Pariatur dolor fugiat itaque obcaecati distinctio rem qui quos, neque earum?</div>
+
+
+
+    <button id="light">Light mode</button>
+    <button id="dark">Dark Mode</button> -->
+
+
+<!-- 
+    <div id="box">Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit aut rerum minus. Reiciendis, aliquid perferendis omnis pariatur perspiciatis corrupti laudantium accusantium nostrum, fuga cum dolorem dicta neque nobis, aliquam magnam!</div>
+    <button id="btn">Gayab</button> -->
+
+<!-- 
+    <div id="outer">
+        <div id="middle">
+            <div id="inner">
+
+            </div>
+        </div>
+    </div> -->
+
+
+    <ul style="border: 1px solid black; padding: 5px;" id="list">
+        <li style="border : 1px solid red; margin: 5px;">A</li>
+        <li style="border : 1px solid red; margin: 5px;">B</li>
+        <li style="border : 1px solid red; margin: 5px;">C</li>
+    </ul>
+
+
+
+
+    <div id="dabba">
+        <span class="boxes">A</span>
+        <span class="boxes">B</span>
+        <span class="boxes">C</span>
+        <span class="boxes">D</span>
+    </div>
+
+    <script>
+        function kuchbhi(){
+            alert("Event fired")
+        }
+    </script>
+    <script src="./app.js"></script>
+</body>
+</html>
