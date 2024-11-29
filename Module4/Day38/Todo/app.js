@@ -45,7 +45,20 @@ function display() {
         deleteBtn.innerText = "Delete";
 
         // Handle delete action
-        deleteBtn.addEventListener("click",removeItem)
+        deleteBtn.addEventListener("click", () => {
+            let originalData = localStorage.getItem("tasks")
+            originalData = JSON.parse(originalData)
+            // console.log(originalData)
+
+            let arr = originalData.filter((i) => {
+
+                return i.desc != item.desc
+            })
+
+
+            localStorage.setItem("tasks", JSON.stringify(arr))
+            display()
+        })
 
         cardBody.appendChild(textContainer);
         cardBody.appendChild(deleteBtn);
