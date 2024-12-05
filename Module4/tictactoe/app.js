@@ -14,6 +14,30 @@ let winners = [
 ]
 
 
+
+let countMoves = 0
+
+
+// function handleDraw()
+// {
+//     let count = 0
+
+//     for(let item of buttons)
+//     {
+//         if(item.innerText != "")
+//         {
+//             count++
+//         }
+//     }
+
+//     if(count == 9)
+//     {
+//         wm.innerText = "It's a draw, try again!"
+//         return true
+//     }
+//     return false
+// }
+
 function disableAllBtns()
 {
     for(let item of buttons)
@@ -32,7 +56,7 @@ function checkWinner()
 
         if(s1 == "❌" && s2 == "❌" && s3 == "❌")
         {
-            // console.log("Player 1 wins")
+            console.log("Player 1 wins")
             wm.innerText = "Player 1 win"
             disableAllBtns()
 
@@ -40,16 +64,21 @@ function checkWinner()
                 window.location.reload()
             }, 5000)
 
+            return true
+
         }
         else if(s1 == "〇" && s2 == "〇" && s3 == "〇")
         {
-            // console.log("Player 2 wins")
+            console.log("Player 2 wins")
             wm.innerText = "Player 2 win"
             disableAllBtns()
 
             setTimeout(()=> {
                 window.location.reload()
             }, 5000)
+
+
+            return true
         }
     }
 }
@@ -61,17 +90,57 @@ for(let item of buttons)
     item.addEventListener("click", () => {
         if(turnX)
         {
+            countMoves++
             item.innerText = "❌"
             turnX = false
             item.disabled = true
-            checkWinner()
+            let flag = checkWinner()
+            if(flag)
+            {
+                return 
+            }
+
+            if(countMoves == 9)
+            {
+                wm.innerText = "It's a draw, try again!"
+                setTimeout(() => {
+                    window.location.reload()
+                }, 5000)
+            }
+
+            // let val = handleDraw()
+            // if(val)
+            // {
+            //     setTimeout(() => {
+            //         window.location.reload()
+            //     }, 5000)
+            // }
         }
         else
         {
+            countMoves++
             item.innerText = "〇"
             turnX = true
             item.disabled = true
-            checkWinner()
+            let flag = checkWinner()
+            if(flag)
+            {
+                return true
+            }
+            if(countMoves == 9)
+            {
+                wm.innerText = "It's a draw, try again!"
+                setTimeout(() => {
+                    window.location.reload()
+                }, 5000)
+            }
+            // let val = handleDraw()
+            // if(val)
+            // {
+            //     setTimeout(() => {
+            //         window.location.reload()
+            //     }, 5000)
+            // }
         }
     })
 
