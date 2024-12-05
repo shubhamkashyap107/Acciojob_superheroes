@@ -1,0 +1,22 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+#container{
+    border: 1px solid black;
+
+}
+
+.btn{
+    height: 100px;
+    width: 100px;
+    margin: 5px;
+    border-radius: 5px;
+}
+
+#game{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-top: 40px;
+}
