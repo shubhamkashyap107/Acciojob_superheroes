@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+    </style>
+</head>
+<body id="bdy">
+    
+    <div id="root"></div>
+
+
+
+
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <script type="text/babel">
+
+
+        // let arr = [React.createElement("li", {}, "A"),
+        //             React.createElement("li", {}, "A"), 
+        //             React.createElement("li", {}, "A")]
+
+        // let box = React.createElement("div", { id : "okay", class : "hehe", style : {backgroundColor : "red"} } , "Hello world!")
+        // // let box = React.createElement("div", { id : "okay", class : "hehe", style : {backgroundColor : "red"} } , React.createElement("p", {}, React.createElement("span", {}, "hello from the innermost span")))
+
+        // let list = React.createElement("ul", {id : "list"}, arr)
+
+        // // console.log(box)
+        // ReactDOM.render([box, list], document.getElementById("root"))
+        // // ReactDOM.render(box, document.getElementById("bdy"))
+
+
+
+
+        function App(){
+            return <h1 id="okay">Hello world again</h1>
+        }
+
+
+        // // ReactDOM.render(App(), document.getElementById("root"))
+
+        // let root = ReactDOM.createRoot(document.getElementById("root"))
+        // root.render(App())
+
+
+
+
+        // let dabba = React.createElement("div", {style : {height : "300px", width : "300px", border : "1px solid black"}} ,
+        // React.createElement("div", {style : {height : "200px", width : "200px", border : "1px solid black"} }, 
+        // React.createElement("h1", {style : {color : "blue",}}, "Hi!")))
+
+
+        function Dabba()
+        {
+            return <div style={{backgroundColor : "red", fontSize : "40px"}} id="OKAY"> 
+                    <div>
+                        <h1>Hi!</h1>
+                    </div>
+                </div>
+        }
+
+
+        function Navbar()
+        {
+            return (
+                <div style={{display : "flex", backgroundColor : "pink", justifyContent : "space-between", padding : "5px 30px 5px 30px"}}>
+                    <h3>Company Name</h3>
+
+                    <div>
+                        <a style={{margin : "20px"}} href="">Home</a>
+                        <a style={{margin : "20px"}} href="">About</a>
+                        <a style={{margin : "20px"}} href="">Contact</a>
+                    </div>
+                </div>
+            )
+        }
+
+        let root = ReactDOM.createRoot(document.getElementById("root"))
+        root.render(Navbar())
+
+    </script>
+    
+    
+
+
+</body>
+</html>

@@ -9,6 +9,7 @@ searchBar.addEventListener("input", () => {
         box.innerHTML = ""
 
 
+
     for(let item of datafromapi)
         {
     
