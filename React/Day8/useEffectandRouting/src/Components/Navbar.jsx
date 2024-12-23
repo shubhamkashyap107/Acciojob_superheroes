@@ -14,9 +14,15 @@ const Navbar = () => {
         <a className='text-white m-2' href="/About">About</a>
         <a className='text-white m-2' href="/Contact">Contact</a> */}
         
-          <Link className='text-white m-2' to={"/home"}>Home</Link>
+          {/* <Link className='text-white m-2' to={"/home"}>Home</Link>
           <Link className='text-white m-2' to={"/about"}>About</Link>
-          <Link className='text-white m-2' to={"/contact"}>Contact</Link>
+          <Link className='text-white m-2' to={"/contact"}>Contact</Link> */}
+
+
+          <Link className='text-white m-2' to={"/cats"}>Cats</Link>
+          <Link className='text-white m-2' to={"/comments"}>Comments</Link>
+          <Link className='text-white m-2' to={"/users"}>Users</Link>
+
 
 
         </div>
