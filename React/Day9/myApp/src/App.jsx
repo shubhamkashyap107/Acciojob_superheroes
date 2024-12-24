@@ -1,12 +1,14 @@
 import React from 'react'
 import Products from './Components/Products'
 import Loader from './Components/Loader'
+import Todolist from './Components/Todolist'
 
 const App = () => {
   return (
     <div>
-      <Products />
+      {/* <Products /> */}
       {/* <Loader /> */}
+      <Todolist />
     </div>
   )
 }

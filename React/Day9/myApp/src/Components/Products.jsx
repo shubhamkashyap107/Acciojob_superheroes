@@ -6,6 +6,7 @@ const Products = () => {
     const[data, setData] = useState([])
     const[searchQuery, setSearchQuery] = useState("")
     const[displayData, setDisplayData] = useState([])
+    const[showLoader , setShowLoader] = useState(true)
 
     useEffect(() => {
         async function getData()
@@ -45,7 +46,13 @@ const Products = () => {
             displayData && displayData.map((item) => {
                 return (
                     <div className='border p-2 rounded-lg'>
-                        <img className='w-[300px]' src={item.thumbnail} alt="" />
+
+                        {showLoader && <div className='h-[200px] flex items-center justify-center'><Loader /></div>}
+                        
+
+                        <img onLoad={() => {
+                            setShowLoader(false)
+                        }} className='w-[300px]' src={item.thumbnail} alt="" />
 
 
                         <h3>{item.title}</h3>
