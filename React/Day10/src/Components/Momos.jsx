@@ -1,24 +1,38 @@
-import React, { useMemo, useState } from 'react'
+import React, { useCallback, useMemo, useState } from 'react'
 
 const Momos = () => {
 
     const[val, setVal] = useState(0)
     const[count, setCount] = useState(0)
 
-function isPrime(num) {
-    if (num <= 1) {
-      return false;
-    }
-    for (let i = 2; i <= Math.sqrt(num); i++) {
-      if (num % i === 0) {
-       return false;
-      }
-    }
-    return true;
-   }
-  
 
-   function findNthPrime(n) {
+    let isPrime = useCallback((num) => {
+        if (num <= 1) {
+            return false;
+          }
+          for (let i = 2; i <= Math.sqrt(num); i++) {
+            if (num % i === 0) {
+             return false;
+            }
+          }
+          return true;
+    }, []) 
+
+
+    // let isPrime = useCallback(function(num) {
+    //     if (num <= 1) {
+    //       return false;
+    //     }
+    //     for (let i = 2; i <= Math.sqrt(num); i++) {
+    //       if (num % i === 0) {
+    //        return false;
+    //       }
+    //     }
+    //     return true;
+    //    }, [])
+
+
+  let findNthPrime = useCallback(function (n) {
     let count = 0;
     let num = 2;
     while (count < n) {
@@ -28,7 +42,9 @@ function isPrime(num) {
       num++;
     }
     return num - 1;
-   }
+   }, [])
+
+   
   
 //    let ans = findNthPrime(val)
 
