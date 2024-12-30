@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-const Search = () => {
+const Search = ({isDarkMode}) => {
 
 
     const[val, setVal] = useState("")
@@ -8,7 +8,7 @@ const Search = () => {
     const[data, setData] = useState([])
 
   return (
-    <div>
+    <div className={"h-min-[100vh] " + (isDarkMode ? "bg-black" : "bg-white ")}>
 
         <div className='p-4 flex gap-4'>
 
@@ -31,7 +31,7 @@ const Search = () => {
 
         <div>
             {data && data.map((item) => {
-                return <div className='border p-4 m-3'>{item}</div>
+                return <div className={'border p-4 m-3 ' + (isDarkMode ? "text-white" : "text-black")}>{item}</div>
             })}
         </div>
     </div>

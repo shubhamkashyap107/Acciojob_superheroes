@@ -1,12 +1,15 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Navbar from './Components/Navbar'
 import Search from './Components/Search'
 
 const App = () => {
+
+    const[isDarkMode, setIsDarkMode] = useState(false)
+
   return (
     <div>
-      <Navbar />
-      <Search />
+      <Navbar isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode} />
+      <Search isDarkMode={isDarkMode} />
     </div>
   )
 }
