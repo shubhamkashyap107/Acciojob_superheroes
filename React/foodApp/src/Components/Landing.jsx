@@ -6,8 +6,14 @@ import c1 from "../assets/c1.avif"
 import c2 from "../assets/c2.avif"
 import c3 from "../assets/c3.avif"
 import c4 from "../assets/c4.avif"
+import { Link, useNavigate } from 'react-router-dom'
+
+
 
 const Landing = () => {
+
+    const navigate = useNavigate()
+    
   return (
     <div className='bg-[#ff5200] h-[100vh]'>
        
@@ -37,8 +43,12 @@ const Landing = () => {
                 </div>
 
                 <div className='flex '>
+                    <Link to={"/restaurants"}>
                     <img className='h-[250px] w-[260px]' src={c1} alt="" />
-                    <img className='h-[250px] w-[260px]' src={c2} alt="" />
+                    </Link>
+                    <img onClick={() => {
+                        navigate("/instamart")
+                    }} className='h-[250px] w-[260px]' src={c2} alt="" />
                     <img className='h-[250px] w-[260px]' src={c3} alt="" />
                     <img className='h-[250px] w-[260px]' src={c4} alt="" />
                 </div>
