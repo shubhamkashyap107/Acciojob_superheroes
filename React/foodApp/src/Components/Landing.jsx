@@ -2,6 +2,10 @@ import React from 'react'
 import logo from "../assets/logo.png"
 import veggie from "../assets/veggie.avif"
 import sushi from "../assets/sushi.avif"
+import c1 from "../assets/c1.avif"
+import c2 from "../assets/c2.avif"
+import c3 from "../assets/c3.avif"
+import c4 from "../assets/c4.avif"
 
 const Landing = () => {
   return (
@@ -25,15 +29,31 @@ const Landing = () => {
 
         <div className='flex relative'>
             <img className='absolute left-0 h-[450px] w-[250px]' src={veggie} alt="" />
-            <div className='border h-[100%] border-black w-[70%] mx-auto items-center gap-10 flex flex-col'>
+            <div className=' h-[100%]  w-[70%] mx-auto items-center gap-10 flex flex-col'>
                 <h1 className='text-[48px] text-white text-center'>Order food & groceries. Discover <br/> best restaurants. Swiggy it!</h1>
                 <div className='w-[50%] relative' >
                     <input className='w-[100%] h-[56px] rounded-lg p-4' type="text"  placeholder='Search for restaurant, item or more'/>
                     <i class="fa-solid fa-magnifying-glass text-black absolute top-5 right-5" ></i>
                 </div>
+
+                <div className='flex '>
+                    <img className='h-[250px] w-[260px]' src={c1} alt="" />
+                    <img className='h-[250px] w-[260px]' src={c2} alt="" />
+                    <img className='h-[250px] w-[260px]' src={c3} alt="" />
+                    <img className='h-[250px] w-[260px]' src={c4} alt="" />
+                </div>
             </div>
+
+
+
             <img className='absolute right-0 h-[450px] w-[250px]' src={sushi} alt="" />
+        
+        
+        
         </div>
+
+
+
     </div>
   )
 }
