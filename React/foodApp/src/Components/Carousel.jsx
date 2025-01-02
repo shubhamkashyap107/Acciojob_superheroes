@@ -1,33 +1,24 @@
-import React, { useEffect, useState } from 'react'
-import { API, Cloudinary_URL } from '../Utils/Constants'
+
+import {  Cloudinary_URL } from '../Utils/Constants'
 
 
-const Carousel = () => {
+const Carousel = ({data}) => {
 
-    const[data, setData] = useState([])
-   
-    useEffect(() => {
-        async function getData()
-        {
-            const res = await fetch(API)
-            const data = await res.json()
-            console.log(data.data.cards[0].card.card.imageGridCards.info)
-            setData(data.data.cards[0].card.card.imageGridCards.info)
-        }
-
-        getData()
-    }, [])
+  
     
 
   return (
+    <>
+    <h2 className='text-[24px] font-bold ml-40'>What's on your mind?</h2>
     <div  style={{
         scrollbarWidth: "none",
         msOverflowStyle: "none", 
-    }} className='flex overflow-scroll w-[100vw]'>
+    }} className='flex overflow-scroll w-[80vw] mx-auto'>
         {data && data.map((item) => {
-            return <img src={Cloudinary_URL + item.imageId} />
+            return <img className='h-[288px] w-[360px]' src={Cloudinary_URL + item.imageId} />
         })}
     </div>
+    </>
   )
 }
 
