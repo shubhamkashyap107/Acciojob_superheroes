@@ -25,7 +25,7 @@ const AllRestaurants = () => {
       <Navbar />
       <Carousel data={apiData && apiData.data.cards[0].card.card.imageGridCards.info} />
       {/* <Carousel data={apiData ? apiData.data.cards[0].card.card.imageGridCards.info : []} /> */}
-      <hr className='w-[80vw] mx-auto mt-5' />
+      <hr className='w-[80vw] mx-auto mt-5 mb-10' />
       <TopRestaurants data={apiData ? apiData.data.cards[1].card.card.gridElements.infoWithStyle.restaurants : []} />
     </div>
   )
