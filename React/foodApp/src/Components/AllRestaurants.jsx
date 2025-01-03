@@ -5,8 +5,7 @@ import TopRestaurants from './TopRestaurants'
 import { API } from '../Utils/Constants'
 
 const AllRestaurants = () => {
-    const[data, setData] = useState([])
-    const[data2, setData2] = useState([])
+    const [apiData, setApiData] = useState()
 
      
       useEffect(() => {
@@ -14,9 +13,9 @@ const AllRestaurants = () => {
           {
               const res = await fetch(API)
               const data = await res.json()
+              setApiData(data)
               console.log(data.data.cards[1].card.card.gridElements.infoWithStyle.restaurants)
-              setData(data.data.cards[0].card.card.imageGridCards.info)
-              setData2(data.data.cards[1].card.card.gridElements.infoWithStyle.restaurants)
+            
           }
   
           getData()
@@ -24,9 +23,9 @@ const AllRestaurants = () => {
   return (
     <div>
       <Navbar />
-      <Carousel data={data} />
+      <Carousel data={apiData ? apiData.data.cards[0].card.card.imageGridCards.info : []} />
       <hr className='w-[80vw] mx-auto mt-5' />
-      <TopRestaurants data={data2} />
+      <TopRestaurants data={apiData ? apiData.data.cards[1].card.card.gridElements.infoWithStyle.restaurants : []} />
     </div>
   )
 }
