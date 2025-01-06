@@ -10,7 +10,8 @@ const TopRestaurants = ({data}) => {
         msOverflowStyle: "none", 
     }} className='mt-5 flex overflow-scroll'>
         {data && data.map((item) => {
-          return <Card c="tr" time={item.info.sla.slaString} area={item.info.areaName} name={item.info.name} rating={item.info.avgRating} img={item.info.cloudinaryImageId} cuisines={item.info.cuisines} />
+          // console.log(item)
+          return <Card id={item.info.id} c="tr" time={item.info.sla.slaString} area={item.info.areaName} name={item.info.name} rating={item.info.avgRating} img={item.info.cloudinaryImageId} cuisines={item.info.cuisines} />
         })}
     </div>
     

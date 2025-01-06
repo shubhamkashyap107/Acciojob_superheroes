@@ -9,7 +9,7 @@ const ResInCity = ({data}) => {
 
         <div className='grid  grid-cols-4 mt-5'>
             {data && data.map((item) => {
-              return <Card c="ric" time={item.info.sla.slaString} area={item.info.areaName} name={item.info.name} rating={item.info.avgRating} img={item.info.cloudinaryImageId} cuisines={item.info.cuisines} />
+              return <Card id={item.info.id} c="ric" time={item.info.sla.slaString} area={item.info.areaName} name={item.info.name} rating={item.info.avgRating} img={item.info.cloudinaryImageId} cuisines={item.info.cuisines} />
             })}
         </div>
     

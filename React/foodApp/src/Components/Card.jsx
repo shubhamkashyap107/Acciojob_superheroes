@@ -1,7 +1,8 @@
 import React from 'react'
 import { Cloudinary_URL } from '../Utils/Constants'
+import { Link } from 'react-router-dom'
 
-const Card = ({name, img, time, area, rating, cuisines, c}) => {
+const Card = ({name, img, time, area, rating, cuisines, c, id}) => {
 
     let nm = name.length > 20 ? name.slice(0,20) + "..." : name
 
@@ -17,6 +18,7 @@ const Card = ({name, img, time, area, rating, cuisines, c}) => {
     str2 = str2.length > 20 ? str2.slice(0,20) + "..." : str2
 
   return (
+<Link to={`/menu/${id}`}>
     <div className={' flex flex-col items-center ' + (c == "tr" ? "min-w-80 h-[330px]" : "w-[100%] h-[270px]")}>
         <img className='h-[60%] w-[90%] rounded-3xl' src={Cloudinary_URL + img} alt='imgBroken' />
         <div className='p-3 w-[90%]'>
@@ -32,6 +34,8 @@ const Card = ({name, img, time, area, rating, cuisines, c}) => {
             <p className='text-gray-400'>{area}</p>
         </div>
     </div>
+</Link>
+
   )
 }
 
