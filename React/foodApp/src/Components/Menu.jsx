@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { useParams, useSearchParams } from 'react-router-dom'
 import SubMenu from './SubMenu'
 import Navbar from './Navbar'
+import Loader from './Loader'
 
 
 const Menu = () => {
@@ -23,12 +24,18 @@ const Menu = () => {
   return (
     <div>
         <Navbar />
-        <div className='border w-8/12 mx-auto'>
-            {menuData && menuData.map((item) => {
-                console.log(item)
-                return <SubMenu items={item.card.card} title={item.card.card.title}/>
-            })}
-        </div>
+
+        {
+            menuData ? (<div className='border w-8/12 mx-auto'>
+                {menuData && menuData.map((item) => {
+                    console.log(item)
+                    return <SubMenu items={item.card.card} title={item.card.card.title}/>
+                })}
+            </div>) : <Loader />
+        }
+
+
+        
     </div>
   )
 }
