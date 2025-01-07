@@ -1,10 +1,11 @@
 
+import { useNavigate } from 'react-router-dom'
 import {  Cloudinary_URL } from '../Utils/Constants'
 
 
 const Carousel = ({data}) => {
 
-  
+  const nav = useNavigate()
     
 
   return (
@@ -15,7 +16,11 @@ const Carousel = ({data}) => {
         msOverflowStyle: "none", 
     }} className='flex overflow-scroll w-[80vw] mx-auto'>
         {data && data.map((item) => {
-            return <img className='h-[288px] w-[360px]' src={Cloudinary_URL + item.imageId} />
+          let str = item.action.link.slice(35).split("?")
+          // console.log(str[0])
+            return <img onClick={() => {
+              nav(`/carrestaurants/${str[0]}`)
+            }} className='h-[288px] w-[360px]' src={Cloudinary_URL + item.imageId} />
         })}
     </div>
     </>
