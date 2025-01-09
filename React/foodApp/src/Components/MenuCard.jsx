@@ -1,7 +1,12 @@
 import React from 'react'
 import { Cloudinary_URL } from '../Utils/Constants'
+import { useDispatch } from 'react-redux'
+import { addToCart } from '../Utils/CartSlice'
 
 const MenuCard = ({img, name, price, desc, isVeg}) => {
+
+  const dispatch = useDispatch()
+
   return (
     <div className='flex h-[200px] p-4 justify-between'>
         <div className='flex flex-col justify-center'>
@@ -10,7 +15,12 @@ const MenuCard = ({img, name, price, desc, isVeg}) => {
             <h2>₹{price}</h2>
             <p className='text-gray-400'>{desc.length > 170 ? desc.slice(0, 170) + "..." : desc}</p>
         </div>
-        <img className='rounded-lg' src={Cloudinary_URL + img} alt="" />
+        <div>
+          <img className='rounded-lg' src={Cloudinary_URL + img} alt="" />
+          <button onClick={() => {
+            dispatch(addToCart({name, price}))
+          }}  className='border bg-white rounded-lg relative bottom-10 left-9 text-green-500 px-5 py-2'>ADD</button>
+        </div>
     </div>
   )
 }

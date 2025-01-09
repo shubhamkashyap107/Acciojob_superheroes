@@ -1,7 +1,19 @@
 import React from 'react'
+import { useSelector } from 'react-redux'
 import {Link} from "react-router-dom"
 
 const Navbar = () => {
+
+  let cartData = useSelector((store) => {
+    return store.cart
+  })
+  let allItems = 0
+
+  for(let item of cartData)
+  {
+    allItems += item.quantity
+  }
+
   return (
     <div className='flex justify-between items-center p-4 shadow-lg mb-5'>
 
@@ -20,7 +32,11 @@ const Navbar = () => {
           </div>
 
           <div className='flex hover:text-orange-400'>
-            <i class="fa-solid fa-cart-shopping text-black mr-1 hover:cursor-pointer"></i>
+            <div className='flex relative'>
+
+            <i class="text-[30px] fa-solid fa-cart-shopping text-black mr-1 hover:cursor-pointer"></i>
+            {cartData.length > 0 &&  <div className='-top-2 rounded-full h-[20px] w-[20px] bg-red-700 absolute right-0 text-white text-center text-sm'>{allItems}</div>}
+            </div>
             <Link>Cart</Link>
           </div>
         </div>
