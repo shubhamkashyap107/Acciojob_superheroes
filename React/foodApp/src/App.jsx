@@ -5,6 +5,7 @@ import AllRestaurants from './Components/AllRestaurants'
 import Menu from './Components/Menu'
 import CarouselRestaurants from './Components/CarouselRestaurants'
 import Search from './Components/Search'
+import Checkout from './Components/Checkout'
 
 const App = () => {
   return (
@@ -16,6 +17,7 @@ const App = () => {
         <Route path='/menu/:id' element={<Menu />} />
         <Route path='/carrestaurants/:id' element={<CarouselRestaurants  />} />
         <Route path='/search' element={<Search  />} />
+        <Route path='/checkout' element={<Checkout  />} />
       </Routes>
 
     </div>

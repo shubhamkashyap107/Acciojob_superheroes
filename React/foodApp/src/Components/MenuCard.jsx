@@ -16,9 +16,9 @@ const MenuCard = ({img, name, price, desc, isVeg}) => {
             <p className='text-gray-400'>{desc.length > 170 ? desc.slice(0, 170) + "..." : desc}</p>
         </div>
         <div>
-          <img className='rounded-lg' src={Cloudinary_URL + img} alt="" />
+          <img className='rounded-lg h-[100%] w-[250px]' src={Cloudinary_URL + img} alt="" />
           <button onClick={() => {
-            dispatch(addToCart({name, price}))
+            dispatch(addToCart({name, price, isVeg, img}))
           }}  className='border bg-white rounded-lg relative bottom-10 left-9 text-green-500 px-5 py-2'>ADD</button>
         </div>
     </div>
