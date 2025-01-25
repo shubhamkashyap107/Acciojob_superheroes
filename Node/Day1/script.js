@@ -1,0 +1,1 @@
+console.log("Hello ferom script dot js")
