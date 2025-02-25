@@ -20,7 +20,7 @@ const App = () => {
             <Route path='/' element={<TestComp />} />
             <Route path='/a' element={<A />} />
             <Route path='/b' element={<B />} />
-            <Route path='/c' element={<C/ >} />
+            <Route path='/c' element={<C />} />
           </Routes>
         </Suspense>
     </div>
