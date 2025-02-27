@@ -2,78 +2,61 @@ const express = require("express")
 const app = express()
 const{v4 : uuid} = require("uuid")
 const cors = require("cors")
+const mongoose = require("mongoose")
+const{User} = require("./Models/Users") 
 
-let db = [
-    {
-      "id": 1,
-      "name": "John Doe",
-      "password": "password123",
-      "age": 25
-    },
-    {
-      "id": 2,
-      "name": "Alice Smith",
-      "password": "alice@456",
-      "age": 30
-    },
-    {
-      "id": 3,
-      "name": "Bob Johnson",
-      "password": "bob_secure!",
-      "age": 28
-    },
-    {
-      "id": 4,
-      "name": "Emma Brown",
-      "password": "emma#pass",
-      "age": 22
-    },
-    {
-      "id": 5,
-      "name": "David Wilson",
-      "password": "david2024",
-      "age": 35
-    }
-  ]
+const dbUrl = "mongodb+srv://shubham:qwerty123@cluster0.mufy0.mongodb.net/MeraDatabase?retryWrites=true&w=majority&appName=Cluster0"
+
+
+
+mongoose.connect(dbUrl)
+.then(() => {
+  console.log("DB Connected")
+})
+.catch((e) => {
+  console.log(e)
+})
+
 
   app.use(express.json())
   app.use(cors())
 
 
-app.get("/users", (req, res) => {
-    res.status(200).send(db)
+app.get("/users", async(req, res) => {
+    let allUsers =  await User.find({})
+    res.status(200).json(allUsers)
 })
 
-app.post("/users", (req, res) => {
-  console.log(req.body)
-    db.push({...req.body, id : uuid()})
-    res.status(201).json({"msg" : "true"})
+app.post("/users", async(req, res) => {
+  await User.insertOne(req.body)
+  res.status(200).json({msg : "true"})
 })
 
-app.put("/users/:id", (req, res) => {
+app.put("/users/:id", async(req, res) => {
     const{id} = req.params
-    db = db.filter((item) => {
-        return item.id != id
-    })
-    db.push({...req.body, id})
-    res.status(201).json({"msg" : "true"})
+
+    await User.findByIdAndUpdate({_id : id}, req.body)
+
+    res.json({msg : "true"})
 
 })
 
-app.delete("/users/:id", (req, res) => {
+app.delete("/users/:id", async(req, res) => {
     const{id} = req.params
-    db = db.filter((item) => {
-        return item.id != id
-    })
-    res.send(db)
+
+    // console.log(id)
+
+    await User.findByIdAndDelete({_id : id})
+
+    const allUsers = await User.find({})
+
+    res.status(200).json(allUsers)
 
 })
 
-app.get("/getuserdata/:id", (req, res) => {
-  const foundItem = db.find((item) => {
-    return item.id == req.params.id
-  })
-  res.json(foundItem)
+app.get("/getuserdata/:id", async(req, res) => {
+   const foundItem = await User.findById(req.params.id)
+   res.status(200).json(foundItem)
 })
 
 
